@@ -24,12 +24,13 @@ set :application, "dbinbox" # Application name.
 #set :location, "dbinbox.com" # Web server url.
 # changed from pointing to dbinbox.com to pointing to my heroku app
 set :location, "http://stormy-fortress-7373.herokuapp.com/" # Web server url.
-set :user, "cgenco" # Remote user name. Must be able to log in via SSH.
+#set :user, "cgenco" # Remote user name. Must be able to log in via SSH.
+set :user, "houselensemergencyuploads" # Remote user name. Must be able to log in via SSH.
 # set :port, 2897 # SSH port. Only required if non default ssh port used.
 set :use_sudo, false # Remove or set the true if all commands should be run through sudo.
 
-set :local_user, "cgenco" # Local user name.
-
+#set :local_user, "cgenco" # Local user name.
+set :local_user, "houselensemergencyuploads" # Local user name.
 set :deploy_to, "/u/apps/#{application}"
 set :deploy_via, :copy # Copy the files across as an archive rather than using Subversion on the remote machine.
 # set :copy_dir, "/home/#{local_user}/tmp/capistrano" # Directory in which the archive will be created. Defaults to /tmp. Note that I had problems with /tmp because on my machine it's on a different partition to the rest of my filesystem and hence a hard link could not be created across devices.
